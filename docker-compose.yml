@@ -1,0 +1,9 @@
+services:
+  nginx:
+    image: nginx:latest
+    container_name: nginx_local
+    ports:
+      - "8080:80"
+    volumes:
+      - ./src:/usr/share/nginx/html:ro
+    restart: unless-stopped
